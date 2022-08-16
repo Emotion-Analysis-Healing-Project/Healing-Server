@@ -6,7 +6,7 @@ from .serializers import *
 from .models import *
 
 class LEDColorView(APIView):
-    def put(self, request, colorpk):
+    def get(self, request, colorpk):
         led=LED.objects.get(color=colorpk)
         print(colorpk)
         f=0
